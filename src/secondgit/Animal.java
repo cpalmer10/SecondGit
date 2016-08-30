@@ -17,12 +17,17 @@ public class Animal {
     }
 
     public void setAge(int age) {
+        if(validateAge(age)){
+            
+            this.age = age;
+        }   
+    }
+    private boolean validateAge(int age){
         if(age < 0 || age > 999){
-            System.out.println("bad value");
+            return false;
         }
         else {
-            this.age = age;
-        }
-        
+            return true;
+        }   
     }
 }
