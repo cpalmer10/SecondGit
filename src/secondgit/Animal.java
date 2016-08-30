@@ -10,5 +10,19 @@ package secondgit;
  * @author Chris
  */
 public class Animal {
-    
+    public int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if(age < 0 || age > 999){
+            System.out.println("bad value");
+        }
+        else {
+            this.age = age;
+        }
+        
+    }
 }
